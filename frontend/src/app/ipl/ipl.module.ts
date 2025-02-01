@@ -2,18 +2,27 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
 import { IplRoutingModule } from "./ipl-routing.module";
-import { ReactiveFormsModule } from "@angular/forms";
+import { FormGroup, FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { TeamCreateComponent } from "./components/teamcreate/teamcreate.component";
+import { CricketerCreateComponent } from "./components/cricketercreate/cricketercreate.component";
+import { MatchCreateComponent } from "./components/matchcreate/matchcreate.component";
+import { Match } from "./types/Match";
+import { TicketBookingComponent } from "./components/ticketbooking/ticketbooking.component";
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    TeamCreateComponent,
+    CricketerCreateComponent,
+    MatchCreateComponent,
+    TicketBookingComponent,
+  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   exports: [
     
   ]
-})
-export class IplModule {}
+})export class IplModule {}
